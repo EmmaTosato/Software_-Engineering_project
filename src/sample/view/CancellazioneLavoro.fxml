@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CancellazioneLavoro">
+   <children>
+      <ToolBar prefHeight="50.0" prefWidth="1000.0">
+         <items>
+            <Button fx:id="goBack" mnemonicParsing="false" onAction="#tornaIndietro" prefHeight="26.0" prefWidth="37.0">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="41.0">
+                     <image>
+                        <Image url="@arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </items>
+      </ToolBar>
+      <Text fx:id="testo2" layoutX="76.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scegli il lavoro da eliminare">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <MenuButton fx:id="menuButtonLavori" layoutX="390.0" layoutY="200.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="256.0" text="Lista lavori">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </MenuButton>
+      <Text fx:id="domanda" disable="true" fill="RED" layoutX="283.0" layoutY="384.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sei sicuro di voler eliminare il lavoro?">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Button fx:id="elimina" disable="true" layoutX="295.0" layoutY="457.0" mnemonicParsing="false" onAction="#elimina" opacity="0.0" prefHeight="40.0" prefWidth="165.0" text="Sì" />
+      <Button fx:id="ripensa" disable="true" layoutX="555.0" layoutY="457.0" mnemonicParsing="false" onAction="#ripensa" opacity="0.0" prefHeight="40.0" prefWidth="165.0" text="No, non eliminarlo" />
+      <Text fx:id="testo1" layoutX="76.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID del lavoratore">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Label fx:id="lavoratoreScelto" layoutX="391.0" layoutY="130.0" prefHeight="33.0" prefWidth="184.0" textFill="#2ba3b9">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

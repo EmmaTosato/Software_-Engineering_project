@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.InserimentoLavoratore">
+   <children>
+      <Text layoutX="70.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dati personali" wrappingWidth="200.0">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <TextField fx:id="Nome" focusTraversable="false" layoutX="70.0" layoutY="80.0" prefHeight="25.0" prefWidth="230.0" promptText="Nome">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="Cognome" focusTraversable="false" layoutX="70.0" layoutY="130.0" prefHeight="25.0" prefWidth="230.0" promptText="Cognome">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="Mail" focusTraversable="false" layoutX="70.0" layoutY="180.0" prefHeight="25.0" prefWidth="230.0" promptText="Mail">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="Telefono" focusTraversable="false" layoutX="70.0" layoutY="230.0" prefHeight="25.0" prefWidth="230.0" promptText="Telefono">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="LuogoNascita" focusTraversable="false" layoutX="70.0" layoutY="330.0" prefHeight="25.0" prefWidth="230.0" promptText="Luogo di Nascita">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <Label fx:id="errNome" layoutX="325.0" layoutY="82.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errCognome" layoutX="325.0" layoutY="132.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errMail" layoutX="325.0" layoutY="182.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errTelefono" layoutX="325.0" layoutY="232.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errDataNascita" layoutX="325.0" layoutY="282.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errLuogoNascita" layoutX="325.0" layoutY="332.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <DatePicker fx:id="DataNascita" focusTraversable="false" layoutX="70.0" layoutY="280.0" prefHeight="36.0" prefWidth="230.0" promptText="Data di Nascita" />
+      <TextField fx:id="Via" focusTraversable="false" layoutX="70.0" layoutY="380.0" prefHeight="25.0" prefWidth="230.0" promptText="Via (Residenza)">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="NumeroCivico" focusTraversable="false" layoutX="70.0" layoutY="430.0" prefHeight="25.0" prefWidth="230.0" promptText="Numero Civico (Residenza)">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="Paese" focusTraversable="false" layoutX="70.0" layoutY="480.0" prefHeight="25.0" prefWidth="230.0" promptText="Paese (Residenza)">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="Nazionalità" focusTraversable="false" layoutX="70.0" layoutY="530.0" prefHeight="29.0" prefWidth="230.0" promptText="Nazionalità">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <Label fx:id="errVia" layoutX="325.0" layoutY="382.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errNumeroCivico" layoutX="325.0" layoutY="432.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errPaese" layoutX="325.0" layoutY="482.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errNazionalità" layoutX="325.0" layoutY="532.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <ComboBox fx:id="Patente" focusTraversable="false" layoutX="70.0" layoutY="623.0" prefHeight="30.0" prefWidth="230.0" promptText="Tipologia Patente" />
+      <CheckBox fx:id="Automunito" focusTraversable="false" layoutX="70.0" layoutY="673.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="Automunit*">
+         <font>
+            <Font size="16.0" />
+         </font></CheckBox>
+      <Text layoutX="500.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indicare eventuali esperienze lavorative e le lingue conosciute" wrappingWidth="410.27593994140625">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <CheckComboBox fx:id="Esperienza" focusTraversable="false" layoutX="500.0" layoutY="81.0" prefHeight="20.0" prefWidth="200.0" title="Esperienze" />
+      <TextField fx:id="NomeEmergenza" focusTraversable="false" layoutX="499.0" layoutY="512.0" prefHeight="25.0" prefWidth="230.0" promptText="Nome">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="CognomeEmergenza" focusTraversable="false" layoutX="499.0" layoutY="562.0" prefHeight="25.0" prefWidth="230.0" promptText="Cognome">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="MailEmergenza" focusTraversable="false" layoutX="499.0" layoutY="612.0" prefHeight="25.0" prefWidth="230.0" promptText="Mail">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="TelefonoEmergenza" focusTraversable="false" layoutX="499.0" layoutY="662.0" prefHeight="25.0" prefWidth="230.0" promptText="Telefono">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <Label fx:id="errNomeEmergenza" layoutX="770.0" layoutY="510.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errCognomeEmergenza" layoutX="770.0" layoutY="560.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errMailEmergenza" layoutX="770.0" layoutY="613.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errTelefonoEmergenza" layoutX="770.0" layoutY="660.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errEsperienza" focusTraversable="false" layoutX="725.0" layoutY="80.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errLingua" focusTraversable="false" layoutX="725.0" layoutY="125.0" textFill="RED" wrapText="true" />
+      <Button fx:id="Registra" focusTraversable="false" layoutX="401.0" layoutY="723.0" mnemonicParsing="false" onAction="#creazioneAnagrafica" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color:  #2ba3b9;" text="Registra l'utente">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <CheckComboBox fx:id="Lingua" focusTraversable="false" layoutX="500.0" layoutY="122.0" prefHeight="20.0" prefWidth="200.0" title="Lingue parlate" />
+      <Text layoutX="500.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indicare un contatto di emergenza">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Text layoutX="503.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indicare due comuni e due periodi per cui il lavoratore è disponibile. Indicare il periodo più vicino nella sezione comune 1. " wrappingWidth="430.48626708984375">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Button fx:id="GoBack" focusTraversable="false" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#tornaIndietro" prefHeight="26.0" prefWidth="37.0">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="29.0">
+               <image>
+                  <Image url="@arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="Comune1" focusTraversable="false" layoutX="499.0" layoutY="302.0" prefHeight="25.0" prefWidth="230.0" promptText="Comune 1">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="Comune2" focusTraversable="false" layoutX="500.0" layoutY="430.0" prefHeight="25.0" prefWidth="230.0" promptText="Comune 2">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <Label fx:id="errComune1" layoutX="770.0" layoutY="303.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errComune2" layoutX="770.0" layoutY="450.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errPatente" layoutX="317.0" layoutY="627.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      <TextField fx:id="dataInizioDisponibilità_comune1" focusTraversable="false" layoutX="499.0" layoutY="222.0" prefHeight="25.0" prefWidth="230.0" promptText="Inizio disponibilità (mm/yyyy)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="dataFineDisponibilità_comune1" focusTraversable="false" layoutX="499.0" layoutY="262.0" prefHeight="25.0" prefWidth="230.0" promptText="Fine disponibilità (mm/yyyy)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="errDataInizioDisponibilità_comune1" layoutX="770.0" layoutY="223.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errDataFineDisponibilità_comune1" layoutX="770.0" layoutY="263.0" textFill="RED" wrapText="true" />
+      <TextField fx:id="dataInizioDisponibilità_comune2" focusTraversable="false" layoutX="500.0" layoutY="350.0" prefHeight="25.0" prefWidth="230.0" promptText="Inizio disponibilità (mm/yyyy)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="dataFineDisponibilità_comune2" focusTraversable="false" layoutX="500.0" layoutY="390.0" prefHeight="25.0" prefWidth="230.0" promptText="Fine disponibilità (mm/yyyy)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="errDataInizioDisponibilità_comune2" layoutX="770.0" layoutY="355.0" textFill="RED" wrapText="true" />
+      <Label fx:id="errDataFineDisponibilità_comune2" layoutX="770.0" layoutY="385.0" textFill="RED" wrapText="true" />
+      <Text layoutX="70.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleziona la patente di grado più alto">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</AnchorPane>

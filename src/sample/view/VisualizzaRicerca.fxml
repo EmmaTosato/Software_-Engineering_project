@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.VisualizzaRicerca">
+   <children>
+      <TableView fx:id="ProfiloLavoratore" editable="true" focusTraversable="false" layoutX="58.0" layoutY="153.0" prefHeight="270.0" prefWidth="900.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="IdLavoratore" minWidth="20.0" prefWidth="100.0" text="ID Lavoratore" />
+          <TableColumn fx:id="Nome" minWidth="20.0" prefWidth="100.0" text="Nome" />
+            <TableColumn fx:id="Cognome" minWidth="20.0" prefWidth="100.0" text="Cognome" />
+            <TableColumn fx:id="Mail" minWidth="20.0" prefWidth="100.0" text="Mail" />
+            <TableColumn fx:id="Telefono" minWidth="20.0" prefWidth="100.0" text="Telefono" />
+            <TableColumn fx:id="DataNascita" minWidth="20.0" prefWidth="100.0" text="Data di Nascita" />
+            <TableColumn fx:id="LuogoNascita" minWidth="20.0" prefWidth="100.0" text="Luogo di Nascita" />
+            <TableColumn fx:id="Via" minWidth="20.0" prefWidth="100.0" text="Via (residenza)" />
+            <TableColumn fx:id="NumeroCivico" minWidth="20.0" prefWidth="100.0" text="Numero civico (residenza)" />
+            <TableColumn fx:id="Paese" minWidth="20.0" prefWidth="100.0" text="Paese (residenza)" />
+            <TableColumn fx:id="Nazionalità" minWidth="20.0" prefWidth="100.0" text="Nazionalità" />
+            <TableColumn fx:id="Esperienze" minWidth="20.0" prefWidth="100.0" text="Esperienze passate" />
+            <TableColumn fx:id="Lingue" minWidth="20.0" prefWidth="100.0" text="Lingue conosciute" />
+            <TableColumn fx:id="Patente" minWidth="20.0" prefWidth="100.0" text="Patente" />
+            <TableColumn fx:id="Automunito" minWidth="20.0" prefWidth="100.0" text="Automunito" />
+            <TableColumn fx:id="Comune1" minWidth="20.0" prefWidth="100.0" text="Zona di disponibilità (1)" />
+            <TableColumn fx:id="Comune2" minWidth="20.0" prefWidth="100.0" text="Zona di disponibilità (2)" />
+            <TableColumn fx:id="InizioDispComune1" minWidth="20.0" prefWidth="75.0" text="Inizio disponibilità zona 1" />
+            <TableColumn fx:id="FineDispComune1" minWidth="20.0" prefWidth="75.0" text="Fine disponibilità zona 1" />
+            <TableColumn fx:id="InizioDispComune2" minWidth="20.0" prefWidth="75.0" text="Inizio disponibilità zona 2" />
+            <TableColumn fx:id="FineDispComune2" minWidth="20.0" prefWidth="75.0" text="Fine disponibilità zona 2" />
+            <TableColumn fx:id="NomeEmergenza" minWidth="20.0" prefWidth="100.0" text="Nome contatto di emergenza" />
+            <TableColumn fx:id="CognomeEmergenza" minWidth="20.0" prefWidth="100.0" text="Cognome contatto di emergenza" />
+            <TableColumn fx:id="MailEmergenza" minWidth="20.0" prefWidth="100.0" text="Mail contatto di emergenza" />
+            <TableColumn fx:id="TelefonoEmergenza" minWidth="20.0" prefWidth="100.0" text="Telefono contatto di emergenza" />
+        </columns>
+      </TableView>
+      <TableView fx:id="ProfiloLavori" focusTraversable="false" layoutX="58.0" layoutY="485.0" prefHeight="270.0" prefWidth="900.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="IdLavoratoreLavoro" minWidth="20.0" prefWidth="100.0" text="ID lavoratore" />
+            <TableColumn fx:id="NomeLavoro" minWidth="20.0" prefWidth="100.0" text="Nome lavoro" />
+            <TableColumn fx:id="NomeAzienda" minWidth="20.0" prefWidth="100.0" text="Nome azienda" />
+            <TableColumn fx:id="LuogoLavoro" minWidth="20.0" prefWidth="100.0" text="Luogo di Lavoro" />
+            <TableColumn fx:id="RetribuzioneGiornaliera" minWidth="20.0" prefWidth="100.0" text="Retribuzione giornaliera" />
+            <TableColumn fx:id="RetribuzioneLorda" minWidth="20.0" prefWidth="100.0" text="Retribuzione lorda" />
+            <TableColumn fx:id="Mansione1" minWidth="20.0" prefWidth="100.0" text="Mansione 1" />
+            <TableColumn fx:id="Mansione2" minWidth="20.0" prefWidth="100.0" text="Mansione 2" />
+            <TableColumn fx:id="DataInizio" minWidth="20.0" prefWidth="100.0" text="Data Inizio" />
+            <TableColumn fx:id="DataFine" minWidth="20.0" prefWidth="100.0" text="Data Fine" />
+         </columns>
+      </TableView>
+      <Text layoutX="58.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profilo lavoratore/i trovato/i: DATI PERSONALI ">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="58.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profilo lavoratore/i trovato/i: TUTTI I LAVORI SVOLTI NEGLI ULTIMI 5 ANNI">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="avviso" focusTraversable="false" layoutX="61.0" layoutY="54.0" prefHeight="44.0" prefWidth="890.0" textFill="RED" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ToolBar prefHeight="42.0" prefWidth="1000.0">
+         <items>
+            <Button fx:id="goBack" focusTraversable="false" mnemonicParsing="false" onAction="#tornaIndietro" prefHeight="25.0" prefWidth="30.0">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="29.0">
+                     <image>
+                        <Image url="@arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

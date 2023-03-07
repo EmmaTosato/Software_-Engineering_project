@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.HomePage">
+   <children>
+      <Text fx:id="domanda" disable="true" layoutX="324.0" layoutY="270.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vuoi ritornare all'homepage?" textAlignment="CENTER" wrappingWidth="332.17059326171875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="noResta" disable="true" focusTraversable="false" layoutX="568.0" layoutY="340.0" mnemonicParsing="false" onAction="#rimani" opacity="0.0" prefHeight="60.0" prefWidth="135.0" text="No, rimani" />
+      <Button fx:id="siEsci" disable="true" focusTraversable="false" layoutX="283.0" layoutY="340.0" mnemonicParsing="false" onAction="#uscita" opacity="0.0" prefHeight="60.0" prefWidth="135.0" text="Sì" />
+      <Button fx:id="registra" cache="true" focusTraversable="false" layoutX="355.0" layoutY="220.0" mnemonicParsing="false" onAction="#registrazione" prefHeight="90.0" prefWidth="285.0" text="Gestione anagrafiche: dati lavoratore" textAlignment="CENTER" wrapText="true">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="aggiornamento" focusTraversable="false" layoutX="355.0" layoutY="350.0" mnemonicParsing="false" onAction="#aggioramento" prefHeight="90.0" prefWidth="285.0" text="Gestione anagrafiche: dati lavori svolti" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="ricerca" focusTraversable="false" layoutX="350.0" layoutY="480.0" mnemonicParsing="false" onAction="#ricerca" prefHeight="90.0" prefWidth="285.0" style="-fx-focus-traversable: transparenttransparent;" text="Ricerca profili dei lavoratori nel database" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ToolBar layoutX="-2.0" layoutY="1.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.84" prefHeight="59.0" prefWidth="1000.0">
+         <items>
+            <Button fx:id="logout" focusTraversable="false" mnemonicParsing="false" onAction="#chiediUscita" prefHeight="38.0" prefWidth="86.0" style="-fx-focus-traversable: transparenttransparent;" text="Log out">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

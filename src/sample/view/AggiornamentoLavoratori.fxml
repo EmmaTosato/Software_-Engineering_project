@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AggiornamentoLavoratori">
+   <children>
+      <Text layoutX="327.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestione anagrafiche lavoratori">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="84.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="83.0" layoutY="188.0" lineSpacing="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleziona un lavoratore dalla lista se vuoi modificarne l'anagrafica oppure cancellarlo dal database. Se vuoi inserire uno nuovo, premi direttamente sul tasto &quot;Inserisci Lavoratore&quot;." wrappingWidth="857.5927734375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <MenuButton fx:id="menuButtonLavoratori" focusTraversable="false" layoutX="91.0" layoutY="247.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" text="Lista Lavoratori">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </MenuButton>
+      <ToolBar prefHeight="50.0" prefWidth="1000.0">
+         <items>
+            <Button fx:id="goBack" focusTraversable="false" mnemonicParsing="false" onAction="#tornaIndietro" prefHeight="26.0" prefWidth="37.0">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="41.0">
+                     <image>
+                        <Image url="@arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </items>
+      </ToolBar>
+      <Label fx:id="errSelezioneLavoratore" layoutX="419.0" layoutY="235.0" prefHeight="62.0" prefWidth="454.0" textFill="RED" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lavoratoreScelto" layoutX="439.0" layoutY="243.0" prefHeight="45.0" prefWidth="231.0" textFill="#2ba3b9" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="180.0" layoutY="452.0" prefHeight="247.0" prefWidth="725.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inserimento di un nuovo lavoratore " underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Modifica dati lavoratore  " underline="true" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cancellazione dati lavoratore " underline="true" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="modifica" focusTraversable="false" mnemonicParsing="false" onAction="#modificaLavoratore" prefHeight="40.0" prefWidth="250.0" text="Modifica Lavoratore" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="inserimento" focusTraversable="false" mnemonicParsing="false" onAction="#inserisciLavoratore" prefHeight="40.0" prefWidth="250.0" text="Inserisci Lavoratore" GridPane.columnIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancella" focusTraversable="false" mnemonicParsing="false" onAction="#cancellaLavoratore" prefHeight="40.0" prefWidth="250.0" text="Cancellazione lavoratore" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Separator layoutX="1.0" layoutY="388.0" prefHeight="3.0" prefWidth="1009.0" />
+   </children>
+</AnchorPane>
